@@ -14,7 +14,7 @@
     "description": "Log variable with label"
   },
 
-
+  
   "Arrow Function": {
     "prefix": "fn",
     "body": [
@@ -34,11 +34,21 @@
     "description": "Exported arrow function"
   },
 
-
   "React Component": {
     "prefix": "rc",
     "body": [
-      "import { ReactNode } from 'react';",
+      "export const ${TM_FILENAME_BASE} = () => {",
+      "  return (",
+      "    <div className=\"${2}\"></div>",
+      "  );",
+      "};"
+    ],
+    "description": "React component"
+  },
+  "React Component Props": {
+    "prefix": "rcp",
+    "body": [
+      "import { type ReactNode } from 'react';",
       "",
       "type Props = {",
       "  children: ReactNode;",
@@ -129,6 +139,36 @@
   "React Hooks / useMemo": {
     "prefix": "useMemo",
     "body": ["const ${1:value} = useMemo(() => ${2}, [${3:}]);"]
+  },
+  "React Context (TypeScript, strict hook)": {
+    "prefix": "rctx",
+    "body": [
+      "import { createContext, useContext, useState, type ReactNode } from \"react\";",
+      "",
+      "type ${1:ContextValues} = {",
+      "  ${2:value}: ${3:string};",
+      "  set${4:Value}: (v: ${3:string}) => void;",
+      "};",
+      "",
+      "const ${5:ContextName} = createContext<${1:ContextValues} | undefined>(undefined);",
+      "",
+      "export const ${5:ContextName}Provider = ({ children }: { children: ReactNode }) => {",
+      "  const [${2:value}, set${4:Value}] = useState<${3:string}>(\"${6}\");",
+      "",
+      "  return (",
+      "    <${5:ContextName}.Provider value={{ ${2:value}, set${4:Value} }}>",
+      "      {children}",
+      "    </${5:ContextName}.Provider>",
+      "  );",
+      "};",
+      "",
+      "export const use${5:ContextName} = () => {",
+      "  const context = useContext(${5:ContextName});",
+      "  if (!context) throw new Error(\"use${5:ContextName} must be used within ${5:ContextName}Provider\");",
+      "  return context;",
+      "};"
+    ],
+    "description": "React Context + Provider + typed hook (TypeScript, strict undefined guard)"
   },
   "React Hooks / useId": {
     "prefix": "useId",
@@ -712,8 +752,7 @@
     "description": "addEventListener + removeEventListener with shared options"
   },
 
-
-  "API / apiClient": {
+  "API / apiClient (with error narrow)": {
     "prefix": "apiClient",
     "body": [
       "type ApiError = {",
@@ -752,26 +791,25 @@
       "    try {",
       "      const url = buildUrl(baseUrl, path, opts.query);",
       "      const auth = getAuthHeader?.();",
+      "      const method = opts.method ?? 'GET';",
       "",
       "      const res = await fetch(url, {",
-      "        method: opts.method ?? 'GET',",
+      "        method,",
       "        headers: {",
       "          ...(opts.body ? { 'Content-Type': 'application/json' } : {}),",
       "          ...(auth ? { Authorization: auth } : {}),",
       "          ...opts.headers,",
       "        },",
-      "        body: opts.body && (opts.method ?? 'GET') !== 'GET' ? JSON.stringify(opts.body) : undefined,",
       "        body: (() => {",
-"          const method = opts.method ?? 'GET';",
-"          if (opts.body && method === 'GET') throw new Error('GET requests cannot include a body');",
-"          return opts.body ? JSON.stringify(opts.body) : undefined;",
-"        })(),",
+      "          if (opts.body && method === 'GET') throw new Error('GET requests cannot include a body');",
+      "          return opts.body ? JSON.stringify(opts.body) : undefined;",
+      "        })(),",
       "        signal: opts.signal,",
       "      });",
       "",
       "      if (!res.ok) {",
       "        let details: unknown = undefined;",
-      "        try { details = await res.json(); } catch { }",
+      "        try { details = await res.json(); } catch {}",
       "        return { ok: false, error: { status: res.status, message: res.statusText, details } };",
       "      }",
       "",
@@ -790,21 +828,14 @@
       "    }",
       "  };",
       "",
-      "  return { request };",
+      "  const isError = <T>(result: ApiResult<T>): result is { ok: false; error: ApiError } => !result.ok;",
+      "",
+      "  return { request, isError };",
       "};"
     ],
-    "description": "API client"
+    "description": "API client with built-in error narrowing"
   },
-  "API / apiErrorNarrow": {
-    "prefix": "apiErrorNarrow",
-    "body": [
-      "type ApiError = { status: number; message: string; details?: unknown };",
-      "type ApiResult<T> = { ok: true; data: T } | { ok: false; error: ApiError };",
-      "",
-      "const isApiError = (r: ApiResult<unknown>): r is { ok: false; error: ApiError } => !r.ok;"
-    ],
-    "description": "ApiResult narrow"
-  },
+
   "API / apiSchema": {
     "prefix": "apiSchema",
     "body": [
@@ -1007,6 +1038,7 @@
     ],
     "description": "Generic chunk utility for splitting arrays into fixed-size groups"
   },
+  
     "Unique Array Generic": {
     "prefix": "unique",
     "body": [
@@ -1015,7 +1047,24 @@
       "}"
     ],
     "description": "Remove duplicate values from an array using Set"
+  },
+
+    "Debounce Generic Function": {
+    "prefix": "debounce",
+    "body": [
+      "function ${1:debounce}<T extends (...args: any[]) => void>(",
+      "  fn: T,",
+      "  delay: number",
+      "): (...args: Parameters<T>) => void {",
+      "  let id: any",
+      "",
+      "  return (...args) => {",
+      "    if (id) clearTimeout(id)",
+      "    id = setTimeout(() => fn(...args), delay)",
+      "  }",
+      "}"
+    ],
+    "description": "Generic debounce utility preserving function parameter types"
   }
-  
 
 }
