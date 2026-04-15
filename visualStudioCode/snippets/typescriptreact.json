@@ -140,8 +140,8 @@
     "prefix": "useMemo",
     "body": ["const ${1:value} = useMemo(() => ${2}, [${3:}]);"]
   },
-  "React Context (TypeScript, strict hook)": {
-    "prefix": "rctx",
+  "React Context": {
+    "prefix": "useContext",
     "body": [
       "import { createContext, useContext, useState, type ReactNode } from \"react\";",
       "",
