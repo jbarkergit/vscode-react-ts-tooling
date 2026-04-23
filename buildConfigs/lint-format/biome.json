@@ -1,0 +1,125 @@
+{
+	"$schema": "https://biomejs.dev/schemas/2.4.12/schema.json",
+	"assist": {
+		"actions": {
+			"recommended": false,
+			"source": {
+				"noDuplicateClasses": "off",
+				"organizeImports": "on",
+				"recommended": false,
+				"useSortedAttributes": "on",
+				"useSortedInterfaceMembers": "on",
+				"useSortedKeys": "on",
+				"useSortedProperties": "on"
+			}
+		},
+		"enabled": true
+	},
+	"css": {
+		"formatter": {
+			"quoteStyle": "single"
+		},
+		"parser": {
+			"allowWrongLineComments": false,
+			"cssModules": true,
+			"tailwindDirectives": false
+		}
+	},
+	"files": {
+		"ignoreUnknown": true,
+		"includes": ["src"],
+		"maxSize": 2097152
+	},
+	"formatter": {
+		"bracketSpacing": true,
+		"enabled": true,
+		"expand": "auto",
+		"formatWithErrors": false,
+		"indentStyle": "tab",
+		"indentWidth": 2,
+		"lineEnding": "lf",
+		"lineWidth": 120,
+		"trailingNewline": true,
+		"useEditorconfig": false
+	},
+	"graphql": {
+		"assist": {
+			"enabled": false
+		},
+		"formatter": {
+			"enabled": false
+		},
+		"linter": {
+			"enabled": false
+		}
+	},
+	"grit": {
+		"assist": {
+			"enabled": false
+		},
+		"formatter": {
+			"enabled": false
+		},
+		"linter": {
+			"enabled": false
+		}
+	},
+	"html": {
+		"experimentalFullSupportEnabled": false,
+		"formatter": {
+			"indentScriptAndStyle": false,
+			"selfCloseVoidElements": "always"
+		},
+		"parser": { "interpolation": true }
+	},
+	"javascript": {
+		"experimentalEmbeddedSnippetsEnabled": false,
+		"formatter": {
+			"arrowParentheses": "always",
+			"attributePosition": "auto",
+			"bracketSameLine": false,
+			"jsxQuoteStyle": "single",
+			"operatorLinebreak": "before",
+			"quoteProperties": "asNeeded",
+			"quoteStyle": "single",
+			"semicolons": "always",
+			"trailingCommas": "none"
+		},
+		"jsxRuntime": "transparent",
+		"parser": {
+			"gritMetavariables": false,
+			"jsxEverywhere": true,
+			"unsafeParameterDecoratorsEnabled": false
+		}
+	},
+	"json": {
+		"formatter": {
+			"trailingCommas": "none"
+		},
+		"parser": {
+			"allowComments": false,
+			"allowTrailingCommas": false
+		}
+	},
+	"linter": {
+		"enabled": true,
+		"rules": {
+			"a11y": "on",
+			"complexity": "on",
+			"correctness": "on",
+			"nursery": "off",
+			"performance": "on",
+			"security": "on",
+			"style": "on",
+			"suspicious": "on"
+		}
+	},
+	"root": true,
+	"vcs": {
+		"clientKind": "git",
+		"defaultBranch": "main",
+		"enabled": true,
+		"root": ".",
+		"useIgnoreFile": true
+	}
+}
