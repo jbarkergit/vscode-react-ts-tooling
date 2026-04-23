@@ -27,7 +27,7 @@
 	},
 	"files": {
 		"ignoreUnknown": true,
-		"includes": ["src"],
+		"includes": ["src/**/*"],
 		"maxSize": 2097152
 	},
 	"formatter": {
@@ -105,12 +105,12 @@
 		"enabled": true,
 		"rules": {
 			"a11y": "on",
-			"complexity": "on",
+			"complexity": { "noExcessiveLinesPerFunction": "off", "recommended": true },
 			"correctness": "on",
 			"nursery": "off",
 			"performance": "on",
 			"security": "on",
-			"style": "on",
+			"style": { "noJsxLiterals": "off", "recommended": true },
 			"suspicious": "on"
 		}
 	},
