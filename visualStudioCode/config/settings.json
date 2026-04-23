@@ -13,9 +13,7 @@
   // PROGRAMMED INTELLIGENCE
   "chat.agent.enabled": false,
   "chat.autopilot.enabled": false,
-  "chat.commandCenter.enabled": false,
   "chat.disableAIFeatures": true,
-  "inlineChat.accessibleDiffView": "off",
   "terminal.integrated.initialHint": false,
   "workbench.settings.enableNaturalLanguageSearch": false,
   "workbench.settings.showAISearchToggle": false,
@@ -215,21 +213,20 @@
   "workbench.tips.enabled": false,
 
   // TYPESCRIPT
-  "typescript.autoClosingTags": true,
-  "typescript.disableAutomaticTypeAcquisition": true,
-  "typescript.format.enable": false,
-  "typescript.preferences.importModuleSpecifier": "non-relative",
-  "typescript.preferences.includePackageJsonAutoImports": "off",
-  "typescript.preferences.quoteStyle": "single",
-  "typescript.preferences.useAliasesForRenames": true,
-  "typescript.suggest.autoImports": false,
-  "typescript.suggest.classMemberSnippets.enabled": false,
-  "typescript.suggest.completeFunctionCalls": true,
-  "typescript.suggest.completeJSDocs": false,
-  "typescript.suggest.enabled": true,
-  "typescript.suggest.includeCompletionsForImportStatements": false,
-  "typescript.suggest.paths": false,
-  "typescript.updateImportsOnFileMove.enabled": "always",
+  "js/ts.autoClosingTags.enabled": true,
+  "js/ts.tsserver.automaticTypeAcquisition.enabled": true,
+  "js/ts.format.enabled": false,
+  "js/ts.preferences.importModuleSpecifier": "non-relative",
+  "js/ts.preferences.includePackageJsonAutoImports": "off",
+  "js/ts.preferences.quoteStyle": "single",
+  "js/ts.preferences.useAliasesForRenames": true,
+  "js/ts.suggest.autoImports": false,
+  "js/ts.suggest.completeFunctionCalls": true,
+  "js/ts.suggest.jsdoc.enabled": false,
+  "js/ts.suggest.enabled": true,
+  "js/ts.suggest.includeCompletionsForImportStatements": false,
+  "js/ts.suggest.paths": false,
+  "js/ts.updateImportsOnFileMove.enabled": "always",
 
   // FORMATTING
   "editor.codeActionsOnSave": {
@@ -238,7 +235,7 @@
   },
   "editor.defaultFormatter": "biomejs.biome",
   "[css]": {"editor.defaultFormatter": "biomejs.biome"},
-  "[scss]": {"editor.defaultFormatter": "sibiraj-s.vscode-scss-formatter"},
+  "[scss]": {"editor.defaultFormatter": "biomejs.biome"},
   "[typescript]": {"editor.defaultFormatter": "biomejs.biome"},
   "[typescriptreact]": {"editor.defaultFormatter": "biomejs.biome"},
   "[json]": {"editor.defaultFormatter": "biomejs.biome"},
@@ -423,9 +420,6 @@
   "path-intellisense.showHiddenFiles": false,
   "path-intellisense.showOnAbsoluteSlash": true,
 
-  // EXTENSION: PRETTY TYPESCRIPT ERRORS
-  "scssFormatter.singleQuote": true,
-
   // EXTENSION: REST CLIENT
   "rest-client.addRequestBodyLineIndentationAroundBrackets": true,
   "rest-client.certificates": {},
@@ -552,8 +546,6 @@
   "prettier.useTabs": false,
   "prettier.vueIndentScriptAndStyle": false,
   "prettier.withNodeModules": true,
-
-  // OTHER
   "json.schemaDownload.trustedDomains": {
     "https://schemastore.azurewebsites.net/": true,
     "https://raw.githubusercontent.com/": true,
