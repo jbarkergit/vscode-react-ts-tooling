@@ -1,0 +1,18 @@
+{
+    "scripts": {
+        "lint": "eslint app --ext .ts,.tsx,.js,.jsx",
+        "lint:fix": "eslint app --ext .ts,.tsx,.js,.jsx --fix"
+    },
+    "devDependencies": {
+        "eslint": "",
+        "eslint-config-airbnb": "",
+        "eslint-config-airbnb-typescript": "",
+        "eslint-config-prettier": "",
+        "eslint-plugin-import": "",
+        "eslint-plugin-jsx-a11y": "",
+        "eslint-plugin-prettier": "",
+        "eslint-plugin-react": "",
+        "eslint-plugin-react-hooks": "",
+        "prettier": ""
+    }
+}
