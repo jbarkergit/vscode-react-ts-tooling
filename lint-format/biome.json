@@ -1,5 +1,5 @@
 {
-	"$schema": "https://biomejs.dev/schemas/2.4.12/schema.json",
+	"$schema": "https://biomejs.dev/schemas/2.4.13/schema.json",
 	"assist": {
 		"actions": {
 			"recommended": false,
@@ -9,7 +9,7 @@
 				"recommended": false,
 				"useSortedAttributes": "on",
 				"useSortedInterfaceMembers": "on",
-				"useSortedKeys": "on",
+				"useSortedKeys": "off",
 				"useSortedProperties": "on"
 			}
 		},
@@ -27,7 +27,7 @@
 	},
 	"files": {
 		"ignoreUnknown": true,
-		"includes": ["src/**/*"],
+		"includes": ["src/**/*", "server/**/*", "electron/**/*", "*.{ts,tsx,js,jsx,json}"],
 		"maxSize": 2097152
 	},
 	"formatter": {
@@ -97,7 +97,7 @@
 			"trailingCommas": "none"
 		},
 		"parser": {
-			"allowComments": false,
+			"allowComments": true,
 			"allowTrailingCommas": false
 		}
 	},
@@ -105,12 +105,14 @@
 		"enabled": true,
 		"rules": {
 			"a11y": "on",
-			"complexity": { "noExcessiveLinesPerFunction": "off", "recommended": true },
+			"complexity": {
+				"noExcessiveLinesPerFunction": "off"
+			},
 			"correctness": "on",
 			"nursery": "off",
 			"performance": "on",
 			"security": "on",
-			"style": { "noJsxLiterals": "off", "recommended": true },
+			"style": { "useBlockStatements": "off" },
 			"suspicious": "on"
 		}
 	},
