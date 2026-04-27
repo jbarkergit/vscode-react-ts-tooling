@@ -76,9 +76,8 @@
 },
   "explorer.sortOrder": "type",
   "files.exclude": {
-    "**/node_modules": false,
-    "**/node_modules/**": false,
-    "package-lock.json":true
+    "node_modules": false,
+    "package-lock.json":false
   },
   "scm.diffDecorations": "gutter",
   "scm.inputMinLineCount": 3,
@@ -187,7 +186,7 @@
   "extensions.ignoreRecommendations": true,
   "files.associations": {
     "*.html": "html",
-    "*.ts": "typescriptreact",
+    "*.ts": "typescript",
     "*.tsx": "typescriptreact"
   },
   "search.smartCase": true,
@@ -217,16 +216,18 @@
   "js/ts.tsserver.automaticTypeAcquisition.enabled": true,
   "js/ts.format.enabled": false,
   "js/ts.preferences.importModuleSpecifier": "non-relative",
-  "js/ts.preferences.includePackageJsonAutoImports": "off",
+  "js/ts.preferences.includePackageJsonAutoImports": "auto",
   "js/ts.preferences.quoteStyle": "single",
   "js/ts.preferences.useAliasesForRenames": true,
-  "js/ts.suggest.autoImports": false,
+  "js/ts.suggest.autoImports": true,
   "js/ts.suggest.completeFunctionCalls": true,
   "js/ts.suggest.jsdoc.enabled": false,
   "js/ts.suggest.enabled": true,
-  "js/ts.suggest.includeCompletionsForImportStatements": false,
-  "js/ts.suggest.paths": false,
+  "js/ts.suggest.includeCompletionsForImportStatements": true,
+  "js/ts.suggest.paths": true,
   "js/ts.updateImportsOnFileMove.enabled": "always",
+  "js/ts.tsdk.path": "node_modules/typescript/lib",
+  "js/ts.tsdk.promptToUseWorkspaceVersion": true,
 
   // FORMATTING
   "editor.codeActionsOnSave": {
@@ -553,5 +554,6 @@
     "https://json.schemastore.org/": true,
     "https://json-schema.org/": true,
     "https://biomejs.dev": true
-  }
+  },
+  "js/ts.tsserver.log": "verbose"
 }

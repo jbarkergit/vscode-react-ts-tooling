@@ -106,14 +106,15 @@
 		"rules": {
 			"a11y": "on",
 			"complexity": {
+				"useLiteralKeys": "off",
 				"noExcessiveLinesPerFunction": "off"
 			},
 			"correctness": "on",
 			"nursery": "off",
 			"performance": "on",
-			"security": "on",
+			"security": { "noGlobalEval": "error" },
 			"style": { "useBlockStatements": "off" },
-			"suspicious": "on"
+			"suspicious": { "noConsole": "warn" }
 		}
 	},
 	"root": true,
@@ -123,5 +124,33 @@
 		"enabled": true,
 		"root": ".",
 		"useIgnoreFile": true
-	}
+	},
+	"overrides": [
+		{
+			"includes": ["server/**/*", "electron/**/*"],
+			"javascript": {
+				"parser": {
+					"jsxEverywhere": false
+				}
+			},
+			"linter": {
+				"rules": {
+					"correctness": {
+						"noNodejsModules": "off",
+						"noProcessGlobal": "off"
+					}
+				}
+			}
+		},
+		{
+			"includes": ["vite.config.ts", "electron/**/*"],
+			"linter": {
+				"rules": {
+					"correctness": {
+						"noNodejsModules": "off"
+					}
+				}
+			}
+		}
+	]
 }
