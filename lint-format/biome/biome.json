@@ -113,7 +113,7 @@
 			"nursery": "off",
 			"performance": "on",
 			"security": { "noGlobalEval": "error" },
-			"style": { "useBlockStatements": "off" },
+			"style": { "useBlockStatements": "off", "noNonNullAssertion": "off" },
 			"suspicious": { "noConsole": "warn" }
 		}
 	},

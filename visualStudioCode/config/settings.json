@@ -9,18 +9,15 @@
   "telemetry.enableTelemetry": false,
   "telemetry.feedback.enabled": false,
   "telemetry.telemetryLevel": "off",
-  
-  // PROGRAMMED INTELLIGENCE
+  // LARGE LANGUAGE MODELS
   "chat.agent.enabled": false,
   "chat.autopilot.enabled": false,
   "chat.disableAIFeatures": true,
   "terminal.integrated.initialHint": false,
   "workbench.settings.enableNaturalLanguageSearch": false,
   "workbench.settings.showAISearchToggle": false,
-  
   // SECURITY
   "security.workspace.trust.enabled": false,
-
   // GIT
   "git.autofetch": false,
   "git.confirmForcePush": true,
@@ -28,7 +25,6 @@
   "git.enableSmartCommit": false,
   "git.openRepositoryInParentFolders": "never",
   "git.postCommitCommand": "none",
-
   // FONTS
   "debug.console.fontFamily": "Fira Code",
   "editor.codeLensFontFamily": "Fira Code",
@@ -43,11 +39,9 @@
   "terminal.integrated.fontWeight": "400",
   "terminal.integrated.letterSpacing": 1,
   "terminal.integrated.lineHeight": 1.2,
-
   // THEME
   "workbench.colorTheme": "One Dark Pro Monokai Darker",
-  "workbench.iconTheme": "material-icon-theme",
-
+  "workbench.iconTheme": null,
   // VISUAL
   "breadcrumbs.enabled": false,
   "diffEditor.ignoreTrimWhitespace": false,
@@ -65,27 +59,30 @@
   "editor.smoothScrolling": true,
   "editor.stickyScroll.enabled": true,
   "explorer.compactFolders": false,
-  "explorer.decorations.badges":true,
+  "explorer.decorations.badges": true,
   "explorer.decorations.colors": false,
   "explorer.fileNesting.enabled": false,
   "explorer.fileNesting.expand": false,
   "explorer.fileNesting.patterns": {
-  "*.scss": "${capture}.css",
-  ".eslintrc.*": ".eslintignore, .editorconfig, .prettierrc",
-	"appsettings.json": "appsettings.*.json"
-},
+    "*.scss": "${capture}.css",
+    ".eslintrc.*": ".eslintignore, .editorconfig, .prettierrc",
+    "appsettings.json": "appsettings.*.json"
+  },
   "explorer.sortOrder": "type",
   "files.exclude": {
     "node_modules": false,
-    "package-lock.json":false
+    "package-lock.json": false
   },
   "scm.diffDecorations": "gutter",
   "scm.inputMinLineCount": 3,
   "scm.inputMaxLineCount": 10,
   "[scminput]": {
-  "editor.rulers": [50, 72],
-  "editor.wordWrap": "off"
-},
+    "editor.rulers": [
+      50,
+      72
+    ],
+    "editor.wordWrap": "off"
+  },
   "search.showLineNumbers": true,
   "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.cursorStyle": "line",
@@ -107,7 +104,6 @@
   "workbench.tree.enableStickyScroll": false,
   "workbench.tree.indent": 20,
   "workbench.tree.renderIndentGuides": "none",
-
   // BEHAVIORAL
   "editor.inlineSuggest.edits.allowCodeShifting": "never",
   "editor.inlineSuggest.edits.renderSideBySide": "never",
@@ -115,11 +111,10 @@
   "files.autoSaveDelay": 1000,
   "files.autoSaveWhenNoErrors": true,
   "files.autoSaveWorkspaceFilesOnly": true,
-  "files.defaultLanguage": "typescriptreact",
+  // "files.defaultLanguage": "typescriptreact",
   "files.insertFinalNewline": true,
   "terminal.integrated.defaultProfile.windows": "Git Bash",
   "terminal.integrated.hideOnStartup": "never",
-
   // PERFORMANCE
   "diffEditor.maxComputationTime": 9500,
   "diffEditor.maxFileSize": 200,
@@ -153,7 +148,6 @@
   "workbench.navigationControl.enabled": false,
   "workbench.remoteIndicator.showExtensionRecommendations": false,
   "workbench.startupEditor": "none",
-  
   // QUALITY OF LIFE
   "diffEditor.experimental.showMoves": true,
   "editor.inlayHints.enabled": "off",
@@ -187,7 +181,8 @@
   "files.associations": {
     "*.html": "html",
     "*.ts": "typescript",
-    "*.tsx": "typescriptreact"
+    "*.tsx": "typescriptreact",
+    "*.rs": "rust"
   },
   "search.smartCase": true,
   "search.sortOrder": "type",
@@ -206,14 +201,24 @@
   "window.restoreWindows": "all",
   "window.zoomPerWindow": true,
   "window.zoomLevel": -0.2,
+  "workbench.editor.wrapTabs": true,
   "workbench.settings.editor": "json",
   "workbench.settings.openDefaultKeybindings": false,
   "workbench.settings.openDefaultSettings": false,
   "workbench.tips.enabled": false,
-
+  // JSON
+  "json.schemaDownload.trustedDomains": {
+    "https://schemastore.azurewebsites.net/": true,
+    "https://raw.githubusercontent.com/": true,
+    "https://www.schemastore.org/": true,
+    "https://json.schemastore.org/": true,
+    "https://json-schema.org/": true,
+    "https://biomejs.dev": true
+  },
   // TYPESCRIPT
   "js/ts.autoClosingTags.enabled": true,
   "js/ts.tsserver.automaticTypeAcquisition.enabled": true,
+  "js/ts.tsserver.log": "off",
   "js/ts.format.enabled": false,
   "js/ts.preferences.importModuleSpecifier": "non-relative",
   "js/ts.preferences.includePackageJsonAutoImports": "auto",
@@ -228,22 +233,33 @@
   "js/ts.updateImportsOnFileMove.enabled": "always",
   "js/ts.tsdk.path": "node_modules/typescript/lib",
   "js/ts.tsdk.promptToUseWorkspaceVersion": true,
-
   // FORMATTING
   "editor.codeActionsOnSave": {
     "source.fixAll.biome": "explicit",
     "source.organizeImports.biome": "explicit"
   },
-  "editor.defaultFormatter": "biomejs.biome",
-  "[css]": {"editor.defaultFormatter": "biomejs.biome"},
-  "[scss]": {"editor.defaultFormatter": "biomejs.biome"},
-  "[typescript]": {"editor.defaultFormatter": "biomejs.biome"},
-  "[typescriptreact]": {"editor.defaultFormatter": "biomejs.biome"},
-  "[json]": {"editor.defaultFormatter": "biomejs.biome"},
+  // "editor.defaultFormatter": "biomejs.biome",
+  "[css]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[rust]": {
+    "editor.defaultFormatter": "rust-lang.rust-analyzer"
+  },
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
   "editor.formatOnType": false,
-
   // EXTENSION: MATERIAL ICON THEME
   "material-icon-theme.activeIconPack": "react",
   "material-icon-theme.enableLogging": false,
@@ -261,19 +277,25 @@
   "material-icon-theme.rootFolders.associations": {},
   "material-icon-theme.rootFolders.color": "#90a4ae",
   "material-icon-theme.saturation": 1,
-
   // EXTENSION: BIOME
   "biome.suggestInstallingGlobally": false,
-  
   // EXTENSION: ERROR LENS
-   "errorLens.alignMessage": {
+  "errorLens.alignMessage": {
     "start": 0,
     "end": 0,
     "minimumMargin": 4,
-    "padding": [0, 0],
+    "padding": [
+      0,
+      0
+    ],
     "useFixedPosition": true
   },
-  "errorLens.border": ["", "", "", ""],
+  "errorLens.border": [
+    "",
+    "",
+    "",
+    ""
+  ],
   "errorLens.borderRadius": "0.2em",
   "errorLens.codeLensEnabled": false,
   "errorLens.codeLensLength": {
@@ -304,7 +326,11 @@
     "buttonsEnabled": false
   },
   "errorLens.enabled": true,
-  "errorLens.enabledDiagnosticLevels": ["error", "warning", "info"],
+  "errorLens.enabledDiagnosticLevels": [
+    "error",
+    "warning",
+    "info"
+  ],
   "errorLens.enabledInMergeConflict": true,
   "errorLens.enableOnDiffView": false,
   "errorLens.errorGutterIconColor": "#e45454",
@@ -338,7 +364,10 @@
   "errorLens.infoGutterIconPath": "",
   "errorLens.light": {},
   "errorLens.lintFilePaths": {
-    "eslint": ["**/*.eslintrc.{js,cjs,yaml,yml,json}", "**/*package.json"],
+    "eslint": [
+      "**/*.eslintrc.{js,cjs,yaml,yml,json}",
+      "**/*package.json"
+    ],
     "Stylelint": [
       "**/*.stylelintrc",
       "**/*.stylelintrc.{cjs,js,json,yaml,yml}",
@@ -368,7 +397,12 @@
   "errorLens.scrollbarHackEnabled": false,
   "errorLens.searchForProblemQuery": "https://duckduckgo.com/?q=$message",
   "errorLens.selectProblemType": "closestProblem",
-  "errorLens.severityText": ["⛔", "⚠", "ℹ", "🍏"],
+  "errorLens.severityText": [
+    "⛔",
+    "⚠",
+    "ℹ",
+    "🍏"
+  ],
   "errorLens.statusBarColorsEnabled": false,
   "errorLens.statusBarCommand": "goToProblem",
   "errorLens.statusBarIconsAlignment": "left",
@@ -384,13 +418,14 @@
   "errorLens.statusBarMessageType": "activeLine",
   "errorLens.warningGutterIconColor": "#ff942f",
   "errorLens.warningGutterIconPath": "",
-
   // EXTENSION: IMPORT COST
   "importCost.bundleSizeColoring": "minified",
   "importCost.bundleSizeDecoration": "both",
   "importCost.debug": false,
   "importCost.fontStyle": "italic",
-  "importCost.javascriptExtensions": ["\\.jsx?$"],
+  "importCost.javascriptExtensions": [
+    "\\.jsx?$"
+  ],
   "importCost.largePackageDarkColor": "#d44e40",
   "importCost.largePackageLightColor": "#d44e40",
   "importCost.margin": 1,
@@ -401,13 +436,16 @@
   "importCost.smallPackageDarkColor": "#7cc36e",
   "importCost.smallPackageLightColor": "#7cc36e",
   "importCost.smallPackageSize": 50,
-  "importCost.svelteExtensions": ["\\.svelte$"],
+  "importCost.svelteExtensions": [
+    "\\.svelte$"
+  ],
   "importCost.timeout": 20000,
-  "importCost.typescriptExtensions": ["\\.tsx?$"],
+  "importCost.typescriptExtensions": [
+    "\\.tsx?$"
+  ],
   "importCost.vueExtensions": [
     "\\.vue$"
   ],
-
   // EXTENSION: PATH INTELLISENSE
   "path-intellisense.absolutePathTo": "",
   "path-intellisense.absolutePathToWorkspace": true,
@@ -420,7 +458,6 @@
   },
   "path-intellisense.showHiddenFiles": false,
   "path-intellisense.showOnAbsoluteSlash": true,
-
   // EXTENSION: REST CLIENT
   "rest-client.addRequestBodyLineIndentationAroundBrackets": true,
   "rest-client.certificates": {},
@@ -455,14 +492,6 @@
   "rest-client.suppressResponseBodyContentTypeValidationWarning": false,
   "rest-client.timeoutinmilliseconds": 0,
   "rest-client.useContentDispositionFilename": true,
-
-  // EXTENSION: GITHUB ACTIONS
-  "github-actions.remote-name": "origin",
-  "github-actions.use-enterprise": false,
-  "github-actions.workflows.pinned.refresh.enabled": false,
-  "github-actions.workflows.pinned.refresh.interval": 30,
-  "github-actions.workflows.pinned.workflows": [],
-
   // EXTENSION: ESLINT
   "eslint.codeAction.disableRuleComment": {
     "enable": true,
@@ -515,7 +544,6 @@
   "eslint.useFlatConfig": false,
   "eslint.validate": [],
   "eslint.workingDirectories": [],
-
   // EXTENSION: PRETTIER
   "prettier.arrowParens": "always",
   "prettier.bracketSameLine": true,
@@ -546,14 +574,5 @@
   "prettier.useEditorConfig": true,
   "prettier.useTabs": false,
   "prettier.vueIndentScriptAndStyle": false,
-  "prettier.withNodeModules": true,
-  "json.schemaDownload.trustedDomains": {
-    "https://schemastore.azurewebsites.net/": true,
-    "https://raw.githubusercontent.com/": true,
-    "https://www.schemastore.org/": true,
-    "https://json.schemastore.org/": true,
-    "https://json-schema.org/": true,
-    "https://biomejs.dev": true
-  },
-  "js/ts.tsserver.log": "verbose"
+  "prettier.withNodeModules": true
 }
