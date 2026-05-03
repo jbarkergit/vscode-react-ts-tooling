@@ -1,0 +1,15 @@
+{
+	"extends": "./tsconfig.base.json",
+	"compilerOptions": {
+		"target": "ESNext",
+		"lib": ["ESNext", "DOM", "DOM.Iterable"],
+		"jsx": "react-jsx",
+		"module": "ESNext",
+		"moduleResolution": "Bundler",
+		"allowImportingTsExtensions": true,
+		"allowArbitraryExtensions": true,
+		"noEmit": true,
+		"outDir": "dist"
+	},
+	"include": ["src/**/*", "vite-env.d.ts", "electron/electron-env.d.ts", "vitest.setup.ts"]
+}
