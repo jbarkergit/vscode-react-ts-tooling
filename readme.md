@@ -1,6 +1,6 @@
-# Note
+# Personal VSCode Configuration
 
-This setup covers React, TypeScript, and Rust tooling, including VSCode configs, snippets, and tenkeyless keybindings. It is a personal VSCode configuration for React/TypeScript development, subject to ongoing changes.
+Covers React, TypeScript, and Rust tooling — VSCode configs, snippets, and tenkeyless keybindings. Subject to ongoing changes.
 
 ## Fonts
 
