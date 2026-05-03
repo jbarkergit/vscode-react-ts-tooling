@@ -1,0 +1,15 @@
+{
+    "recommendations": [
+        "biomejs.biome",
+        "vadimcn.vscode-lldb",
+        "fill-labs.dependi",
+        "usernamehw.errorlens",
+        "PKief.material-icon-theme",
+        "zhuangtongfa.material-theme",
+        "christian-kohler.path-intellisense",
+        "YoavBls.pretty-ts-errors",
+        "humao.rest-client",
+        "rust-lang.rust-analyzer",
+        "styled-components.vscode-styled-components"
+    ]
+}
