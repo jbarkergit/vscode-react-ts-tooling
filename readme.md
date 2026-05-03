@@ -1,6 +1,6 @@
 # Personal VSCode Configuration
 
-Covers React, TypeScript, and Rust tooling — VSCode configs, snippets, and tenkeyless keybindings. Subject to ongoing changes.
+Covers React, TypeScript, and Rust tooling — VSCode configs, snippets, keybindings, and lint/format setups for Biome and ESLint + Prettier. Subject to ongoing changes.
 
 ## Fonts
 
