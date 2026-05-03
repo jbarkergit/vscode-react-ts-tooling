@@ -1,0 +1,213 @@
+//  VSCode Keybindings — Custom WASD-style Navigation
+//
+//  EDITOR MOVEMENT (alt + key)
+//  alt+w          Move cursor up
+//  alt+s          Move cursor down
+//  alt+a          Move cursor left
+//  alt+d          Move cursor right
+//  alt+q          Jump word left
+//  alt+e          Jump word right
+//
+//  EDITOR SELECTION (alt+shift + key)
+//  alt+shift+w    Select up
+//  alt+shift+s    Select down
+//  alt+shift+a    Select left
+//  alt+shift+d    Select right
+//
+//  LINE MANIPULATION (alt + key)
+//  alt+r          Move line up
+//  alt+f          Move line down
+//  alt+shift+q    Copy line up
+//  alt+shift+e    Copy line down
+//
+//  TERMINAL (alt+shift + key)
+//  alt+shift+c    Toggle terminal
+//  alt+shift+v    New terminal
+//
+//  TERMINAL MOVEMENT (alt + key, when terminal focused)
+//  alt+w          Move up (scroll)
+//  alt+s          Move down (scroll)
+//  alt+a          Move left one char
+//  alt+d          Move right one char
+//  alt+q          Jump word left
+//  alt+e          Jump word right
+//
+//  AUTOCOMPLETE DROPDOWN (alt + key, when suggestion visible)
+//  alt+w          Previous suggestion
+//  alt+s          Next suggestion
+//
+//  PARAMETER HINTS (alt + key, when hints visible)
+//  alt+w          Previous parameter hint
+//  alt+s          Next parameter hint
+//
+//  QUICK OPEN / COMMAND PALETTE (alt + key, when open)
+//  alt+w          Navigate to previous item
+//  alt+s          Navigate to next item
+//
+[
+    // Editor Movement
+    {
+        "key": "alt+w",
+        "command": "cursorUp",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+s",
+        "command": "cursorDown",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+a",
+        "command": "cursorLeft",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+d",
+        "command": "cursorRight",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+q",
+        "command": "cursorWordLeft",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+e",
+        "command": "cursorWordRight",
+        "when": "editorTextFocus"
+    },
+    // Editor Selection
+    {
+        "key": "alt+shift+w",
+        "command": "cursorUpSelect",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+shift+s",
+        "command": "cursorDownSelect",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+shift+a",
+        "command": "cursorLeftSelect",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+shift+d",
+        "command": "cursorRightSelect",
+        "when": "editorTextFocus"
+    },
+    // Line Manipulation
+    {
+        "key": "alt+r",
+        "command": "editor.action.moveLinesUpAction",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+f",
+        "command": "editor.action.moveLinesDownAction",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+shift+q",
+        "command": "editor.action.copyLinesUpAction",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+shift+e",
+        "command": "editor.action.copyLinesDownAction",
+        "when": "editorTextFocus"
+    },
+    // Terminal
+    {
+        "key": "alt+shift+c",
+        "command": "workbench.action.terminal.toggleTerminal",
+        "when": "terminal.active"
+    },
+    {
+        "key": "alt+shift+v",
+        "command": "workbench.action.terminal.new"
+    },
+    // Terminal Movement
+    {
+        "key": "alt+w",
+        "command": "workbench.action.terminal.sendSequence",
+        "args": {
+            "text": "\u001b[A"
+        }, // Arrow up
+        "when": "terminalFocus"
+    },
+    {
+        "key": "alt+s",
+        "command": "workbench.action.terminal.sendSequence",
+        "args": {
+            "text": "\u001b[B"
+        }, // Arrow down
+        "when": "terminalFocus"
+    },
+    {
+        "key": "alt+a",
+        "command": "workbench.action.terminal.sendSequence",
+        "args": {
+            "text": "\u001b[D"
+        }, // Arrow left (one char)
+        "when": "terminalFocus"
+    },
+    {
+        "key": "alt+d",
+        "command": "workbench.action.terminal.sendSequence",
+        "args": {
+            "text": "\u001b[C"
+        }, // Arrow right (one char)
+        "when": "terminalFocus"
+    },
+    {
+        "key": "alt+q",
+        "command": "workbench.action.terminal.sendSequence",
+        "args": {
+            "text": "\u001bb"
+        }, // Alt+B → word left
+        "when": "terminalFocus"
+    },
+    {
+        "key": "alt+e",
+        "command": "workbench.action.terminal.sendSequence",
+        "args": {
+            "text": "\u001bf"
+        }, // Alt+F → word right
+        "when": "terminalFocus"
+    },
+    // Autocomplete Dropdown
+    {
+        "key": "alt+w",
+        "command": "selectPrevSuggestion",
+        "when": "suggestWidgetVisible"
+    },
+    {
+        "key": "alt+s",
+        "command": "selectNextSuggestion",
+        "when": "suggestWidgetVisible"
+    },
+    // Parameter Hints
+    {
+        "key": "alt+w",
+        "command": "showPrevParameterHint",
+        "when": "parameterHintsVisible"
+    },
+    {
+        "key": "alt+s",
+        "command": "showNextParameterHint",
+        "when": "parameterHintsVisible"
+    },
+    // Quick Open / Command Palette
+    {
+        "key": "alt+w",
+        "command": "workbench.action.quickOpenNavigatePrevious",
+        "when": "inQuickOpen"
+    },
+    {
+        "key": "alt+s",
+        "command": "workbench.action.quickOpenNavigateNext",
+        "when": "inQuickOpen"
+    }
+]

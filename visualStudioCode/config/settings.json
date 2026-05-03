@@ -41,8 +41,8 @@
   "terminal.integrated.letterSpacing": 1,
   "terminal.integrated.lineHeight": 1.2,
   // THEME
-  "workbench.colorTheme": "Vira Graphene High Contrast",
-  "workbench.iconTheme": "vira-icons-graphene",
+  "workbench.colorTheme": "One Dark Pro Night Flat",
+  "workbench.iconTheme": "material-icon-theme",
   // VISUAL
   "breadcrumbs.enabled": false,
   "diffEditor.ignoreTrimWhitespace": false,
@@ -261,6 +261,8 @@
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
   "editor.formatOnType": false,
+  // EXTENSION: BIOME
+  "biome.suggestInstallingGlobally": false,
   // EXTENSION: MATERIAL ICON THEME
   "material-icon-theme.activeIconPack": "react",
   "material-icon-theme.enableLogging": false,
@@ -278,8 +280,6 @@
   "material-icon-theme.rootFolders.associations": {},
   "material-icon-theme.rootFolders.color": "#90a4ae",
   "material-icon-theme.saturation": 1,
-  // EXTENSION: BIOME
-  "biome.suggestInstallingGlobally": false,
   // EXTENSION: ERROR LENS
   "errorLens.alignMessage": {
     "start": 0,
@@ -419,34 +419,6 @@
   "errorLens.statusBarMessageType": "activeLine",
   "errorLens.warningGutterIconColor": "#ff942f",
   "errorLens.warningGutterIconPath": "",
-  // EXTENSION: IMPORT COST
-  "importCost.bundleSizeColoring": "minified",
-  "importCost.bundleSizeDecoration": "both",
-  "importCost.debug": false,
-  "importCost.fontStyle": "italic",
-  "importCost.javascriptExtensions": [
-    "\\.jsx?$"
-  ],
-  "importCost.largePackageDarkColor": "#d44e40",
-  "importCost.largePackageLightColor": "#d44e40",
-  "importCost.margin": 1,
-  "importCost.mediumPackageDarkColor": "#7cc36e",
-  "importCost.mediumPackageLightColor": "#7cc36e",
-  "importCost.mediumPackageSize": 100,
-  "importCost.showCalculatingDecoration": true,
-  "importCost.smallPackageDarkColor": "#7cc36e",
-  "importCost.smallPackageLightColor": "#7cc36e",
-  "importCost.smallPackageSize": 50,
-  "importCost.svelteExtensions": [
-    "\\.svelte$"
-  ],
-  "importCost.timeout": 20000,
-  "importCost.typescriptExtensions": [
-    "\\.tsx?$"
-  ],
-  "importCost.vueExtensions": [
-    "\\.vue$"
-  ],
   // EXTENSION: PATH INTELLISENSE
   "path-intellisense.absolutePathTo": "",
   "path-intellisense.absolutePathToWorkspace": true,
@@ -459,40 +431,6 @@
   },
   "path-intellisense.showHiddenFiles": false,
   "path-intellisense.showOnAbsoluteSlash": true,
-  // EXTENSION: REST CLIENT
-  "rest-client.addRequestBodyLineIndentationAroundBrackets": true,
-  "rest-client.certificates": {},
-  "rest-client.decodeEscapedUnicodeCharacters": false,
-  "rest-client.defaultHeaders": {
-    "User-Agent": "vscode-restclient"
-  },
-  "rest-client.disableAddingHrefLinkForLargeResponse": true,
-  "rest-client.disableHighlightResonseBodyForLargeResponse": true,
-  "rest-client.enableCustomVariableReferencesCodeLens": true,
-  "rest-client.enableSendRequestCodeLens": true,
-  "rest-client.enableTelemetry": false,
-  "rest-client.environmentVariables": {
-    "$shared": {}
-  },
-  "rest-client.excludeHostsForProxy": [],
-  "rest-client.followredirect": true,
-  "rest-client.fontFamily": "Fira Code",
-  "rest-client.fontSize": 0,
-  "rest-client.fontWeight": "400",
-  "rest-client.formParamEncodingStrategy": "automatic",
-  "rest-client.largeResponseBodySizeLimitInMB": 5,
-  "rest-client.logLevel": "error",
-  "rest-client.mimeAndFileExtensionMapping": {},
-  "rest-client.previewColumn": "beside",
-  "rest-client.previewOption": "full",
-  "rest-client.previewResponseInUntitledDocument": false,
-  "rest-client.previewResponsePanelTakeFocus": true,
-  "rest-client.rememberCookiesForSubsequentRequests": true,
-  "rest-client.requestNameAsResponseTabTitle": false,
-  "rest-client.showResponseInDifferentTab": false,
-  "rest-client.suppressResponseBodyContentTypeValidationWarning": false,
-  "rest-client.timeoutinmilliseconds": 0,
-  "rest-client.useContentDispositionFilename": true,
   // EXTENSION: ESLINT
   "eslint.codeAction.disableRuleComment": {
     "enable": true,
@@ -575,59 +513,5 @@
   "prettier.useEditorConfig": true,
   "prettier.useTabs": false,
   "prettier.vueIndentScriptAndStyle": false,
-  "prettier.withNodeModules": true,
-  "workbench.colorCustomizations": {
-    "[Vira*]": {
-      "statusBar.debuggingBackground": "#80CBC433",
-      "statusBar.debuggingForeground": "#80CBC4",
-      "toolbar.activeBackground": "#80CBC426",
-      "button.background": "#80CBC4",
-      "button.hoverBackground": "#80CBC4cc",
-      "extensionButton.separator": "#80CBC433",
-      "extensionButton.background": "#80CBC414",
-      "extensionButton.foreground": "#80CBC4",
-      "extensionButton.hoverBackground": "#80CBC433",
-      "extensionButton.prominentForeground": "#80CBC4",
-      "extensionButton.prominentBackground": "#80CBC414",
-      "extensionButton.prominentHoverBackground": "#80CBC433",
-      "activityBarBadge.background": "#80CBC4",
-      "activityBar.activeBorder": "#80CBC4",
-      "activityBarTop.activeBorder": "#80CBC4",
-      "list.inactiveSelectionIconForeground": "#80CBC4",
-      "list.activeSelectionForeground": "#80CBC4",
-      "list.inactiveSelectionForeground": "#80CBC4",
-      "list.highlightForeground": "#80CBC4",
-      "sash.hoverBorder": "#80CBC480",
-      "list.activeSelectionIconForeground": "#80CBC4",
-      "scrollbarSlider.activeBackground": "#80CBC480",
-      "editorSuggestWidget.highlightForeground": "#80CBC4",
-      "textLink.foreground": "#80CBC4",
-      "progressBar.background": "#80CBC4",
-      "pickerGroup.foreground": "#80CBC4",
-      "tab.activeBorder": "#80CBC4",
-      "tab.activeBorderTop": "#80CBC400",
-      "tab.unfocusedActiveBorder": "#80CBC4",
-      "tab.unfocusedActiveBorderTop": "#80CBC400",
-      "tab.activeModifiedBorder": "#80CBC400",
-      "notificationLink.foreground": "#80CBC4",
-      "editorWidget.resizeBorder": "#80CBC4",
-      "editorWidget.border": "#80CBC4",
-      "settings.modifiedItemIndicator": "#80CBC4",
-      "panelTitle.activeBorder": "#80CBC4",
-      "breadcrumb.activeSelectionForeground": "#80CBC4",
-      "menu.selectionForeground": "#80CBC4",
-      "menubar.selectionForeground": "#80CBC4",
-      "editor.findMatchBorder": "#80CBC4",
-      "selection.background": "#80CBC440",
-      "statusBarItem.remoteBackground": "#80CBC414",
-      "statusBarItem.remoteHoverBackground": "#80CBC4",
-      "statusBarItem.remoteForeground": "#80CBC4",
-      "notebook.inactiveFocusedCellBorder": "#80CBC480",
-      "chat.slashCommandForeground": "#80CBC4",
-      "chat.avatarForeground": "#80CBC4",
-      "activityBarBadge.foreground": "#000000",
-      "button.foreground": "#000000",
-      "statusBarItem.remoteHoverForeground": "#000000"
-    }
-  }
+  "prettier.withNodeModules": true
 }
