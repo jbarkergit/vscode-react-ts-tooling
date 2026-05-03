@@ -11,5 +11,6 @@ No font files are included — install your preferred option separately.
 - [ESLint](https://eslint.org) — pluggable JS/TS linter
 - [Prettier](https://prettier.io) — opinionated code formatter
 - [Vite](https://vitejs.dev) — fast frontend build tool
+- [Vitest](https://vitest.dev/) - A Vite-native testing framework
 - [Electron](https://www.electronjs.org) — build cross-platform desktop apps with web tech
 - [ts-reset](https://github.com/mattpocock/ts-reset) — fixes TypeScript's weak built-in typings
