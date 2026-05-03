@@ -1,3 +1,5 @@
 # Note
 
-This is a personal tooling setup. It is actively evolving and reflects current workflow decisions rather than a finalized or canonical configuration. Some parts may be outdated due to preference changes. Nothing here should be considered stable, complete, or universally applicable. Expect ongoing changes and occasional breakage over time.
+This setup covers React, TypeScript, and Rust tooling, including VSCode configs, snippets, and tenkeyless keybindings via keybindings.json.
+
+Warning: this is an evolving setup. Configs and keybindings may change frequently and can occasionally break or become outdated without notice.
