@@ -1,10 +1,11 @@
 {
-	"scripts": {
-		"lint": "biome lint --write .",
-		"format": "biome format --write .",
-		"lint:format": "biome check --write ."
-	},
-	"devDependencies": {
-		"@biomejs/biome": "2.4.13"
-	}
+    "scripts": {
+        "lint": "biome lint --write .",
+        "format": "biome format --write .",
+        "check": "biome check --write .",
+        "check:ci": "biome ci ."
+    },
+    "devDependencies": {
+        "@biomejs/biome": "latest"
+    }
 }

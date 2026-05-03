@@ -1,18 +1,20 @@
 {
     "scripts": {
         "lint": "eslint app --ext .ts,.tsx,.js,.jsx",
-        "lint:fix": "eslint app --ext .ts,.tsx,.js,.jsx --fix"
+        "lint:fix": "eslint app --ext .ts,.tsx,.js,.jsx --fix",
+        "format": "prettier --write .",
+        "format:ci": "prettier --check ."
     },
     "devDependencies": {
-        "eslint": "",
-        "eslint-config-airbnb": "",
-        "eslint-config-airbnb-typescript": "",
-        "eslint-config-prettier": "",
-        "eslint-plugin-import": "",
-        "eslint-plugin-jsx-a11y": "",
-        "eslint-plugin-prettier": "",
-        "eslint-plugin-react": "",
-        "eslint-plugin-react-hooks": "",
-        "prettier": ""
+        "eslint": "latest",
+        "eslint-config-airbnb": "latest",
+        "eslint-config-airbnb-typescript": "latest",
+        "eslint-config-prettier": "latest",
+        "eslint-plugin-import": "latest",
+        "eslint-plugin-jsx-a11y": "latest",
+        "eslint-plugin-prettier": "latest",
+        "eslint-plugin-react": "latest",
+        "eslint-plugin-react-hooks": "latest",
+        "prettier": "latest"
     }
 }
