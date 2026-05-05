@@ -27,7 +27,7 @@
 	},
 	"files": {
 		"ignoreUnknown": true,
-		"includes": ["src/**/*", "server/**/*", "electron/**/*", "*.{ts,tsx,js,jsx,json}"],
+		"includes": ["app/**/*", "server/**/*", "electron/**/*", "*.{ts,tsx,js,jsx,json}"],
 		"maxSize": 2097152
 	},
 	"formatter": {
@@ -109,11 +109,11 @@
 				"useLiteralKeys": "off",
 				"noExcessiveLinesPerFunction": "off"
 			},
-			"correctness": "on",
+			"correctness": { "useQwikValidLexicalScope": "off" },
 			"nursery": "off",
 			"performance": "on",
 			"security": { "noGlobalEval": "error" },
-			"style": { "useBlockStatements": "off", "noNonNullAssertion": "off" },
+			"style": { "useBlockStatements": "off" },
 			"suspicious": { "noConsole": "warn" }
 		}
 	},
