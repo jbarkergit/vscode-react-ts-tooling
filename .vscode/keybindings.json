@@ -144,13 +144,23 @@
     // AUTOCOMPLETE DROPDOWN
     {
         "key": "alt+w",
+        "command": "-selectPrevSuggestion",
+        "when": "suggestWidgetVisible"
+    },
+    {
+        "key": "alt+s",
+        "command": "-selectNextSuggestion",
+        "when": "suggestWidgetVisible"
+    },
+    {
+        "key": "alt+w",
         "command": "selectPrevSuggestion",
-        "when": "suggestWidgetVisible || suggestWidgetMultipleSuggestions"
+        "when": "suggestWidgetVisible"
     },
     {
         "key": "alt+s",
         "command": "selectNextSuggestion",
-        "when": "suggestWidgetVisible || suggestWidgetMultipleSuggestions"
+        "when": "suggestWidgetVisible"
     },
     // PARAMETER HINTS
     {

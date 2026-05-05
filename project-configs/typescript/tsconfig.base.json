@@ -16,7 +16,7 @@
 		"useUnknownInCatchVariables": true,
 		"noUncheckedIndexedAccess": true,
 		"noFallthroughCasesInSwitch": true,
-		"noPropertyAccessFromIndexSignature": true,
+		"noPropertyAccessFromIndexSignature": false,
 		"allowUnusedLabels": false,
 		"allowUnreachableCode": false,
 		"noUnusedLocals": true,
