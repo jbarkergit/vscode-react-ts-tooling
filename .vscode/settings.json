@@ -9,11 +9,11 @@
   "telemetry.enableTelemetry": false,
   "telemetry.feedback.enabled": false,
   "telemetry.telemetryLevel": "off",
+  "telemetry.performance.inputLatencySamplingProbability": 0,
   // LARGE LANGUAGE MODELS
   "chat.agent.enabled": false,
   "chat.autopilot.enabled": false,
   "chat.disableAIFeatures": true,
-  "terminal.integrated.initialHint": false,
   "workbench.settings.enableNaturalLanguageSearch": false,
   "workbench.settings.showAISearchToggle": false,
   // SECURITY
@@ -114,8 +114,9 @@
   "files.autoSaveWorkspaceFilesOnly": true,
   // "files.defaultLanguage": "typescriptreact",
   "files.insertFinalNewline": true,
-  "terminal.integrated.defaultProfile.windows": "Git Bash",
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
   "terminal.integrated.hideOnStartup": "never",
+  "terminal.integrated.initialHint": false,
   // PERFORMANCE
   "diffEditor.maxComputationTime": 9500,
   "diffEditor.maxFileSize": 200,
@@ -256,11 +257,13 @@
     "editor.defaultFormatter": "biomejs.biome"
   },
   "[rust]": {
-    "editor.defaultFormatter": "rust-lang.rust-analyzer"
+    "editor.defaultFormatter": "rust-lang.rust-analyzer",
   },
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
   "editor.formatOnType": false,
+  // EXTENSION: RUST ANALYZER
+  "rust-analyzer.inlayHints.typeHints.enable": true,
   // EXTENSION: BIOME
   "biome.suggestInstallingGlobally": false,
   // EXTENSION: MATERIAL ICON THEME
@@ -513,5 +516,5 @@
   "prettier.useEditorConfig": true,
   "prettier.useTabs": false,
   "prettier.vueIndentScriptAndStyle": false,
-  "prettier.withNodeModules": true
+  "prettier.withNodeModules": true,
 }
